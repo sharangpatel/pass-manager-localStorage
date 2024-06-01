@@ -35,11 +35,11 @@ const Manager = () => {
   const showPassword = () => {
     passwordRef.current.type = "text";
     console.log(imgRef.current.src);
-    if (imgRef.current.src.includes("/src/assets/hiddenEye.png")) {
+    if (imgRef.current.src.includes("../src/assets/hiddenEye.png")) {
       passwordRef.current.type = "password";
-      imgRef.current.src = "/src/assets/showEye.png";
+      imgRef.current.src = "../src/assets/showEye.png";
     } else {
-      imgRef.current.src = "/src/assets/hiddenEye.png";
+      imgRef.current.src = "../src/assets/hiddenEye.png";
       passwordRef.current.type = "text";
     }
   };
