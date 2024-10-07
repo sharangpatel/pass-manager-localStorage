@@ -51,7 +51,15 @@ const Manager = () => {
       console.log([...passwordArray, form]);
       setform({site:"",username:"",password:""})
     }else{
-
+      toast("All the fileds should be min of 4 characters", { position: "top-right",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+      });
     }
    
     
