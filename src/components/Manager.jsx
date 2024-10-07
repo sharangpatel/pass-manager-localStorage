@@ -1,7 +1,7 @@
 import React from "react";
 import { useRef, useState, useEffect } from "react";
 import { v4 as uuidv4 } from 'uuid';
-
+import hidden from "./src/assets/hiddenEye.png"
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -35,11 +35,11 @@ const Manager = () => {
   const showPassword = () => {
     passwordRef.current.type = "text";
     console.log(imgRef.current.src);
-    if (imgRef.current.src.includes("./src/assets/hiddenEye.png")) {
+    if (imgRef.current.src.includes({hidden})) {
       passwordRef.current.type = "password";
-      imgRef.current.src = "./src/assets/showEye.png";
+      imgRef.current.src = "/src/assets/showEye.png";
     } else {
-      imgRef.current.src = "./src/assets/hiddenEye.png";
+      imgRef.current.src = "/src/assets/hiddenEye.png";
       passwordRef.current.type = "text";
     }
   };
@@ -157,7 +157,7 @@ const Manager = () => {
                   ref={imgRef}
                   className="p-1"
                   width={26}
-                  src="./src/assets/showEye.png"
+                  src="/src/assets/showEye.png"
                   alt=""
                 />
               </span>
