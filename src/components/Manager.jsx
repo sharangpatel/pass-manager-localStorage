@@ -35,11 +35,11 @@ const Manager = () => {
   const showPassword = () => {
     passwordRef.current.type = "text";
     console.log(imgRef.current.src);
-    if (imgRef.current.src.includes("/src/assets/hiddenEye.png")) {
+    if (imgRef.current.src.includes("./src/assets/hiddenEye.png")) {
       passwordRef.current.type = "password";
-      imgRef.current.src = "/src/assets/showEye.png";
+      imgRef.current.src = "./src/assets/showEye.png";
     } else {
-      imgRef.current.src = "/src/assets/hiddenEye.png";
+      imgRef.current.src = "./src/assets/hiddenEye.png";
       passwordRef.current.type = "text";
     }
   };
@@ -157,7 +157,7 @@ const Manager = () => {
                   ref={imgRef}
                   className="p-1"
                   width={26}
-                  src="/src/assets/showEye.png"
+                  src="./src/assets/showEye.png"
                   alt=""
                 />
               </span>
@@ -233,7 +233,7 @@ const Manager = () => {
                       </td>
                       <td className=" py-2 border border-white text-center">
                         <div className="flex justify-center items-center">
-                          <span>{item.password}</span>
+                          <span>{"*".repeat(item.password.length)}</span>
                           <div
                             className="lordiconcopy cursor-pointer size-7"
                             onClick={() => {
